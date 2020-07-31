@@ -1,6 +1,5 @@
 let soldiers = getSavedSoldiers()
 
-
 renderSoldiers(soldiers)
 
 document.querySelector('#add-soldier').addEventListener('click', function(e){
@@ -16,3 +15,4 @@ document.querySelector('#add-soldier').addEventListener('click', function(e){
 
     location.assign(`/add-soldier.html#${soldier.id}`)
 })
+

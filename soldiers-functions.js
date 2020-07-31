@@ -107,11 +107,20 @@ const generateSoldierDOM = function(soldier){
     if(soldier.name.length > 0){
         textEl.textContent = `Name: ${soldier.name}, Email: ${soldier.email}, Date Of Freedom: ${soldier.days}`
     }
-    textEl.setAttribute('href', `/add-soldier.html#${soldier.id}`)
 
     soldierEl.appendChild(textEl)
     return soldierEl
 }
+
+// const generateFunnyPic = function(){
+//     if(numOfSoldiersInFullIsolation >= 5){
+//         var img = document.createElement("img");
+//         img.src = "funny_pic.jpg";
+//         var src = document.getElementById("header");
+//         src.appendChild(img);
+//     }
+    
+// }
 
 // render app soldiers
 const renderSoldiers = function(soldiers){

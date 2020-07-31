@@ -3,6 +3,7 @@ const emailEl = document.querySelector('#new-email')
 const daysEl = document.querySelector('#number-of-days')
 const soldierId = location.hash.substring(1)
 
+// let numOfSoldiersInFullIsolation = 0
 let soldiers = getSavedSoldiers()
 let soldier = soldiers.find(function(soldier){
     return soldier.id == soldierId

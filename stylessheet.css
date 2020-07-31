@@ -1,0 +1,44 @@
+body{
+    background-color: lightgray;
+}
+
+h1{
+    color: black;
+    text-align: center;
+    font-family: 'Calibri';
+    font-size: 50px;
+}
+
+a{
+    color: black;
+    font-family: 'Calibri';
+    font-size: 20px;
+}
+
+button{
+    color: black;
+    font-family: 'Calibri';
+    font-size: 20px;
+    background-color: darkgray;
+    border-color: black;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+#add-soldier{
+    padding: 10px 32px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+input{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-color: black;
+    font-family: 'Calibri';
+    font-size: 20px;
+}
+
+img{
+    margin-left: 100px;
+}
