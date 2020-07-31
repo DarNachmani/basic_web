@@ -13,18 +13,32 @@ if(soldier === undefined){
 }
 
 nameEl.addEventListener('input', function(e){
-    soldier.name = e.target.value
-    saveSoldiers(soldiers)
+    soldierName = validateName(e.target.value)
+    if(soldierName !== undefined){
+        soldier.name = soldierName
+    }
+    //saveSoldiers(soldiers)
 })
 
 emailEl.addEventListener('input', function(e){
-    soldier.email = e.target.value
-    saveSoldiers(soldiers)
+    soldierEmail = validateEmail(e.target.value)
+    if(soldierEmail !== undefined){
+        soldier.email = soldierEmail
+    }
+    //saveSoldiers(soldiers)
 })
 
 daysEl.addEventListener('input', function(e){
-    soldier.days = getDateOfFreedom(e.target.value)
+    numOfDays = validateNumOfDays(e.target.value)
+    if(numOfDays !== undefined){
+        soldier.days = getDateOfFreedom(numOfDays)
+    //saveSoldiers(soldiers)
+    }
+})
+
+document.querySelector("#create-soldier").addEventListener("click", function(e){
     saveSoldiers(soldiers)
+    location.assign("/index.html")
 })
 
 window.addEventListener('storage', function(e){
