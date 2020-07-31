@@ -14,7 +14,7 @@ if(soldier === undefined){
 
 nameEl.addEventListener('input', function(e){
     soldier.name = e.target.value
-    saveNotes(notes)
+    saveSoldiers(soldiers)
 })
 
 emailEl.addEventListener('input', function(e){
@@ -24,7 +24,7 @@ emailEl.addEventListener('input', function(e){
 
 daysEl.addEventListener('input', function(e){
     soldier.days = getDateOfFreedom(e.target.value)
-    saveNotes(notes)
+    saveSoldiers(soldiers)
 })
 
 window.addEventListener('storage', function(e){
