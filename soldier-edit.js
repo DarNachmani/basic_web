@@ -17,7 +17,6 @@ nameEl.addEventListener('input', function(e){
     if(soldierName !== undefined){
         soldier.name = soldierName
     }
-    //saveSoldiers(soldiers)
 })
 
 emailEl.addEventListener('input', function(e){
@@ -25,14 +24,12 @@ emailEl.addEventListener('input', function(e){
     if(soldierEmail !== undefined){
         soldier.email = soldierEmail
     }
-    //saveSoldiers(soldiers)
 })
 
 daysEl.addEventListener('input', function(e){
     numOfDays = validateNumOfDays(e.target.value)
     if(numOfDays !== undefined){
         soldier.days = getDateOfFreedom(numOfDays)
-    //saveSoldiers(soldiers)
     }
 })
 
