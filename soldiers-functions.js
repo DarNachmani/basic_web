@@ -112,15 +112,39 @@ const generateSoldierDOM = function(soldier){
     return soldierEl
 }
 
-// const generateFunnyPic = function(){
-//     if(numOfSoldiersInFullIsolation >= 5){
-//         var img = document.createElement("img");
-//         img.src = "funny_pic.jpg";
-//         var src = document.getElementById("header");
-//         src.appendChild(img);
-//     }
+const generateFunnyPic = function(){
+    numOfSoldiersInFullIsolation = checkHowManyInFullIsolation()
+    if(numOfSoldiersInFullIsolation >= 5){
+        var img = document.createElement("img");
+        img.src = "funny_pic.jpg";
+        var src = document.getElementById("soldiers");
+        src.appendChild(img);
+    }
+    else{
+        var img = document.getElementsByName("img")
+        if(img.length !== 0){
+            img.remove()
+        }
+    }
     
-// }
+}
+
+
+const checkHowManyInFullIsolation = function(){
+    count = 0
+    soldiers.forEach(element => {
+        c = element.days.match(/(\d+)/g);
+        b = new Date(c[2], c[1]-1, c[0]);
+        a = new Date()
+        a.setHours(0,0,0,0)
+        e = b.getTime() - a.getTime()
+        numOfDays = e / (1000 * 3600 * 24)
+        if(numOfDays === 14){
+            count ++
+        }
+    });
+    return count
+}
 
 // render app soldiers
 const renderSoldiers = function(soldiers){
@@ -138,7 +162,6 @@ const getDateOfFreedom = function(numOfDays){
     var someDate
     someDate = new Date()
     someDate.setDate(someDate.getDate() + Number(numOfDays));
-    debugger
     var dd = someDate.getDate();
     var mm = someDate.getMonth() + 1;
     var y = someDate.getFullYear();

@@ -2,6 +2,8 @@ let soldiers = getSavedSoldiers()
 
 renderSoldiers(soldiers)
 
+generateFunnyPic()
+
 document.querySelector('#add-soldier').addEventListener('click', function(e){
     now = moment().valueOf()
     soldier = {

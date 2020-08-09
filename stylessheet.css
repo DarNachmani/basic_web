@@ -39,6 +39,9 @@ input{
     font-size: 20px;
 }
 
-img{
-    margin-left: 100px;
-}
+img {
+    max-width: 40%;
+    height: auto;
+    margin-left: 800px;
+    margin-top: -150px;
+  }
